@@ -1,14 +1,7 @@
 const getUsuariosFollowersGitHub = async (username) => {
-    var cabecera = new Headers();
-    var mi_opciones_request = {
-        method: 'GET',
-        headers: cabecera,
-        mode: 'no-cors',    
-        cache: 'default'
-    };
     try {
         let url = 'https://api.github.com/users/' + username + '/followers';
-        const respfollowers = await fetch(url, mi_opciones_request);
+        const respfollowers = await fetch(url);
         const followers = await respfollowers.json();
         console.log(followers);
         return followers;

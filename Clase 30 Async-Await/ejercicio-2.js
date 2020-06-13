@@ -1,8 +1,8 @@
-const url = 'https://jsonplaceholder.typicode.com/users';
 const nombres = [];
 const lista = document.querySelector('.lista');
 
 let getNombres = async () => {
+    const url = 'https://jsonplaceholder.typicode.com/users';
     const usuarios = await fetch(url)
     const usuariosJSON = await usuarios.json();
     return usuariosJSON;

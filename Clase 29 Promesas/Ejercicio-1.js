@@ -1,12 +1,12 @@
 let promesa1 = new Promise (
-    (resolve,reject) => {
-        console.log('Pendiente...');
+    (resolve, reject) => {
+        console.log('Pendiente promesa 1... 2 segundos');
         setTimeout(() => {
             if(true){
-                resolve('todo ok');
+                resolve('todo ok promesa 1');
             }
             else {
-                reject('error');
+                reject('error promesa 1');
             }
         }, 2000);
     });

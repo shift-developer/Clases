@@ -1,4 +1,3 @@
-const usuariosGitHub = ['shift-developer', 'juansie96', 'Julio-Borri', 'frenchita'];
 const getUsuariosGitHub = async (username) => {
     try {
         let url = 'https://api.github.com/users/' + username;

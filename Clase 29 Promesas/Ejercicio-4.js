@@ -1,3 +1,4 @@
+setTimeout( () => {
 let promesaRace1 = new Promise(
     (resolve, reject) => {
         let random = Math.random()*1000;
@@ -18,3 +19,5 @@ let promesaRace2 = new Promise(
 
 Promise.race([promesaRace1, promesaRace2])
     .then(res => console.log(res));
+}, 7000);
+

@@ -15,3 +15,4 @@ function tomarDatos() {
 }
 
 button[0].addEventListener('click', tomarDatos);
+

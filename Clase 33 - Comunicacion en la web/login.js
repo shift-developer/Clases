@@ -32,5 +32,6 @@ function guardarForm(){
         hobbies: hobbies.value
     };
     const datosJson = JSON.stringify(datosUsuario);
-    localStorage.setItem('datos', datosJson);
+    localStorage.setItem("datos", datosJson);
+    console.log(JSON.parse(localStorage.getItem("datos")))
 }

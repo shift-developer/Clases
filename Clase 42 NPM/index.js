@@ -1,7 +1,6 @@
 const moment = require("moment");
 const coolImages = require('cool-images');
 const fs = require('fs');
-const { throws } = require("assert");
 
 let hoy = new Date();
 let fecha = new moment(hoy, 'DD/MM/YYYY');

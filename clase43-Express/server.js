@@ -1,3 +1,5 @@
+const express = require('express');
+
 const app = express();
 
 app.listen( 3000, () => {
@@ -11,7 +13,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/error', (req, res) => {
-    res.status(500);
+    res.status(400);
     res.json({ error: 'Hubo un error' });
 });
 
@@ -53,14 +55,10 @@ const fotos = [
 });
 */
 
-app.get('photos/:indicefoto', (req, res) => {
-    //obtenemos parametro de la foto
-    const { indiceFoto } = req.params;
+app.get('photos/', (req, res) => {
 
     //req.query contiene todos los query strings enviados
-    const { size } = req.query;
+    const { size, author } = req.query;
 
-    const foto = fotos[indiceFoto];
-    foto.url.replace('/600', `/${size}`);
-        res.json(foto);
+    res.json( {size, author});
 });
